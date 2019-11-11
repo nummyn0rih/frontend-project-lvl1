@@ -1,0 +1,33 @@
+{
+  "name": "brain-games-project",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nummyn0rih/frontend-project-lvl1.git"
+  },
+  "author": "Ivan Malshchukov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nummyn0rih/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/nummyn0rih/frontend-project-lvl1#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1"
+  }
+}
