@@ -15,4 +15,8 @@ const calculation = (sign, num1, num2) => {
 
 const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
-export { random, calculation, isEven };
+const nod = (num1, num2) => (num1 % num2 === 0 ? num2 : nod(num2, num1 % num2));
+
+export {
+  random, calculation, isEven, nod,
+};
