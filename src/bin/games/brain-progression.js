@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { cons } from '@hexlet/pairs';
 import bodyGame from '../body-game';
 import { random } from '../calc';
 import greeting from '../..';
@@ -12,7 +13,7 @@ const func = () => {
   const arr = [...Array(10)].map((el, ind) => nextValue(ind));
   const result = arr[secretValue];
   arr[secretValue] = '..';
-  return [arr.join(' '), result];
+  return cons(arr.join(' '), result);
 };
 
 const startGame = () => {
