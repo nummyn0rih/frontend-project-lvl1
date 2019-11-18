@@ -1,13 +1,14 @@
 {
   "name": "brain-games-project",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "description": "",
   "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/games/brain-games.js",
     "brain-even": "dist/bin/games/brain-even.js",
     "brain-calc": "dist/bin/games/brain-calc.js",
-    "brain-gcd": "dist/bin/games/brain-gcd.js"
+    "brain-gcd": "dist/bin/games/brain-gcd.js",
+    "brain-prime": "dist/bin/games/brain-prime.js"
   },
   "files": [
     "dist"
