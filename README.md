@@ -8,3 +8,5 @@
 [![asciicast](https://asciinema.org/a/281892.svg)](https://asciinema.org/a/281892)
 ## Install brain-gcd
 [![asciicast](https://asciinema.org/a/cKQzxmhfZsM4XGJfn0PNwAMRk.svg)](https://asciinema.org/a/cKQzxmhfZsM4XGJfn0PNwAMRk)
+## Install brain-progression
+[![asciicast](https://asciinema.org/a/282169.svg)](https://asciinema.org/a/282169)
