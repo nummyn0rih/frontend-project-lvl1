@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
+import { cons } from '@hexlet/pairs';
 import bodyGame from '../body-game';
 import { random, isEven } from '../calc';
 import greeting from '../..';
 
 const func = () => {
   const rand = random(99);
-  return [rand, isEven(rand)];
+  return cons(rand, isEven(rand));
 };
 
 const startGame = () => {
