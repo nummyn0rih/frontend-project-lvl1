@@ -10,3 +10,5 @@
 [![asciicast](https://asciinema.org/a/cKQzxmhfZsM4XGJfn0PNwAMRk.svg)](https://asciinema.org/a/cKQzxmhfZsM4XGJfn0PNwAMRk)
 ## Install brain-progression
 [![asciicast](https://asciinema.org/a/282169.svg)](https://asciinema.org/a/282169)
+## Install brain-prime
+[![asciicast](https://asciinema.org/a/282217.svg)](https://asciinema.org/a/282217)
