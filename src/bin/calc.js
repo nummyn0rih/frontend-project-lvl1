@@ -1,4 +1,4 @@
-const random = (num) => Math.floor(Math.random() * num);
+const random = (max, min = 0) => Math.floor(Math.random() * (max - min) + min);
 
 const calculation = (sign, num1, num2) => {
   switch (sign) {
