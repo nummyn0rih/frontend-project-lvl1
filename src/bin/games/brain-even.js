@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+// eslint-disable-next-line import/no-unresolved
 import { cons } from '@hexlet/pairs';
 import bodyGame from '../body-game';
 import { random, isEven } from '../calc';

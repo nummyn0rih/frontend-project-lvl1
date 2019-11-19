@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+// eslint-disable-next-line import/no-unresolved
 import { cons } from '@hexlet/pairs';
 import bodyGame from '../body-game';
 import { random } from '../calc';
@@ -8,7 +9,7 @@ import greeting from '../..';
 const func = () => {
   const step = random(8, 1);
   const firstValue = random(25);
-  const secretValue = random(0, 9);
+  const secretValue = random(9);
   const nextValue = (num) => firstValue + step * num;
   const arr = [...Array(10)].map((el, ind) => nextValue(ind));
   const result = arr[secretValue];
