@@ -1,21 +1,20 @@
 #!/usr/bin/env node
 
-// eslint-disable-next-line import/no-unresolved
 import { cons } from '@hexlet/pairs';
-import bodyGame from '../body-game';
-import { random, isEven } from '../calc';
+import gameEngine from '../game-engine';
+import { getRandom, isEven } from '../calculation';
 import greeting from '../..';
 
 const func = () => {
-  const rand = random(99);
-  return cons(rand, isEven(rand));
+  const number = getRandom(99);
+  return cons(number, isEven(number));
 };
 
 const startGame = () => {
-  const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const name = greeting(rules);
+  const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const name = greeting(rule);
 
-  bodyGame(name, func);
+  gameEngine(name, func);
 };
 
 startGame();

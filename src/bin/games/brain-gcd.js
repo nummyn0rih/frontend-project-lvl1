@@ -1,23 +1,22 @@
 #!/usr/bin/env node
 
-// eslint-disable-next-line import/no-unresolved
 import { cons } from '@hexlet/pairs';
-import bodyGame from '../body-game';
-import { random, nod } from '../calc';
+import gameEngine from '../game-engine';
+import { getRandom, getNod } from '../calculation';
 import greeting from '../..';
 
 const func = () => {
-  const num1 = random(99);
-  const num2 = random(99);
-  const result = num1 > num2 ? nod(num1, num2) : nod(num2, num1);
+  const num1 = getRandom(99);
+  const num2 = getRandom(99);
+  const result = num1 > num2 ? getNod(num1, num2) : getNod(num2, num1);
   return cons(`${num1} ${num2}`, result);
 };
 
 const startGame = () => {
-  const rules = 'Find the greatest common divisor of given numbers.';
-  const name = greeting(rules);
+  const rule = 'Find the greatest common divisor of given numbers.';
+  const name = greeting(rule);
 
-  bodyGame(name, func);
+  gameEngine(name, func);
 };
 
 startGame();

@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import { car, cdr } from '@hexlet/pairs';
 
 export default (func) => {

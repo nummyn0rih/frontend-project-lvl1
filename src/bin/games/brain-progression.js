@@ -1,27 +1,26 @@
 #!/usr/bin/env node
 
-// eslint-disable-next-line import/no-unresolved
 import { cons } from '@hexlet/pairs';
-import bodyGame from '../body-game';
-import { random } from '../calc';
+import gameEngine from '../game-engine';
+import { getRandom } from '../calculation';
 import greeting from '../..';
 
 const func = () => {
-  const step = random(8, 1);
-  const firstValue = random(25);
-  const secretValue = random(9);
-  const nextValue = (num) => firstValue + step * num;
-  const arr = [...Array(10)].map((el, ind) => nextValue(ind));
-  const result = arr[secretValue];
-  arr[secretValue] = '..';
-  return cons(arr.join(' '), result);
+  const step = getRandom(8, 1);
+  const firstValue = getRandom(25);
+  const secretValue = getRandom(9);
+  const getNextValue = (num) => firstValue + step * num;
+  const numbers = [...Array(10)].map((elem, index) => getNextValue(index));
+  const result = numbers[secretValue];
+  numbers[secretValue] = '..';
+  return cons(numbers.join(' '), result);
 };
 
 const startGame = () => {
-  const rules = 'What number is missing in the progression?';
-  const name = greeting(rules);
+  const rule = 'What number is missing in the progression?';
+  const name = greeting(rule);
 
-  bodyGame(name, func);
+  gameEngine(name, func);
 };
 
 startGame();

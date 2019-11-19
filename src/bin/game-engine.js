@@ -1,13 +1,13 @@
-import request from './request';
-import question from './question';
+import requestPlayerAnswer from './request-player-answer';
+import genQuestion from './gen-question';
 
 export default (playerName, func) => {
   let count = 0;
   while (count < 3) {
-    const answer = question(func);
-    const correctAnswer = typeof answer === 'number' ? answer.toString() : answer;
-    const playerAnswer = request('Your answer: ');
-    if (correctAnswer === playerAnswer) {
+    const correctAnswer = genQuestion(func);
+    const answerToStr = typeof correctAnswer === 'number' ? correctAnswer.toString() : correctAnswer;
+    const playerAnswer = requestPlayerAnswer('Your answer: ');
+    if (answerToStr === playerAnswer) {
       console.log('Correct!');
       count += 1;
     } else {
