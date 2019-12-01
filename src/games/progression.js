@@ -1,9 +1,7 @@
-#!/usr/bin/env node
-
 import { cons } from '@hexlet/pairs';
 import gameEngine from '../game-engine';
-import { getRandom } from '../calculation';
-import greeting from '../..';
+import getRandom from '../get-random';
+import greeting from '..';
 
 const func = () => {
   const step = getRandom(8, 1);
@@ -16,11 +14,9 @@ const func = () => {
   return cons(numbers.join(' '), result);
 };
 
-const startGame = () => {
+export default () => {
   const rule = 'What number is missing in the progression?';
   const name = greeting(rule);
 
   gameEngine(name, func);
 };
-
-startGame();

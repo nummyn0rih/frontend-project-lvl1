@@ -1,0 +1,29 @@
+import { cons } from '@hexlet/pairs';
+import gameEngine from '../game-engine';
+import getRandom from '../get-random';
+import greeting from '..';
+
+const isEven = (num) => (num % 2 === 0);
+
+const isPrime = (num) => {
+  if (num === 2) return 'yes';
+  if (num === 1 || isEven(num)) return 'no';
+  let divisor = 2;
+  while (divisor ** 2 < num) {
+    if (num % divisor === 0) return 'no';
+    divisor += 1;
+  }
+  return 'yes';
+};
+
+const func = () => {
+  const number = getRandom(322, 1);
+  return cons(number, isPrime(number));
+};
+
+export default () => {
+  const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const name = greeting(rule);
+
+  gameEngine(name, func);
+};
