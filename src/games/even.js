@@ -11,4 +11,4 @@ const func = () => {
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-export default () =>  gameEngine(rule, func);
+export default () => gameEngine(rule, func);

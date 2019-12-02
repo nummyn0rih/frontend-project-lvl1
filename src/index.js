@@ -20,7 +20,7 @@ const requestPlayerAnswer = (text) => readlineSync.question(text);
 export default (rule, func) => {
   const playerName = greeting(rule);
   if (func === undefined) return;
-  
+
   let count = 0;
   while (count < 3) {
     const correctAnswer = genQuestion(func);
