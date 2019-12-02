@@ -1,7 +1,6 @@
 import { cons } from '@hexlet/pairs';
-import gameEngine from '../game-engine';
+import gameEngine from '..';
 import getRandom from '../get-random';
-import greeting from '..';
 
 const func = () => {
   const sign = getRandom(3);
@@ -20,9 +19,6 @@ const func = () => {
   }
 };
 
-export default () => {
-  const rule = 'What is the result of the expression?';
-  const name = greeting(rule);
+const rule = 'What is the result of the expression?';
 
-  gameEngine(name, func);
-};
+export default () => gameEngine(rule, func);

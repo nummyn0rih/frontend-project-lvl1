@@ -1,7 +1,6 @@
 import { cons } from '@hexlet/pairs';
-import gameEngine from '../game-engine';
+import gameEngine from '..';
 import getRandom from '../get-random';
-import greeting from '..';
 
 const isEven = (num) => (num % 2 === 0);
 
@@ -21,9 +20,6 @@ const func = () => {
   return cons(number, isPrime(number));
 };
 
-export default () => {
-  const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const name = greeting(rule);
+const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  gameEngine(name, func);
-};
+export default () => gameEngine(rule, func);

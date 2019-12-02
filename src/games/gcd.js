@@ -1,7 +1,6 @@
 import { cons } from '@hexlet/pairs';
-import gameEngine from '../game-engine';
+import gameEngine from '..';
 import getRandom from '../get-random';
-import greeting from '..';
 
 const getNod = (num1, num2) => (num1 % num2 === 0 ? num2 : getNod(num2, num1 % num2));
 
@@ -12,9 +11,6 @@ const func = () => {
   return cons(`${num1} ${num2}`, result);
 };
 
-export default () => {
-  const rule = 'Find the greatest common divisor of given numbers.';
-  const name = greeting(rule);
+const rule = 'Find the greatest common divisor of given numbers.';
 
-  gameEngine(name, func);
-};
+export default () => gameEngine(rule, func);

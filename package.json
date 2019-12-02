@@ -1,6 +1,6 @@
 {
   "name": "brain-games-project",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "several games to warm up the brain",
   "keywords": [
     "game",
@@ -36,10 +36,10 @@
   },
   "homepage": "https://github.com/nummyn0rih/frontend-project-lvl1#readme",
   "devDependencies": {
-    "@babel/cli": "^7.7.0",
-    "@babel/core": "^7.7.2",
-    "@babel/node": "^7.7.0",
-    "@babel/preset-env": "^7.7.1",
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
