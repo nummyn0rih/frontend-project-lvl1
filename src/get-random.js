@@ -1,1 +1,1 @@
-export default (max, min = 0) => Math.floor(Math.random() * (max - min) + min);
+export default (min, max) => Math.floor(Math.random() * (max - min) + min);

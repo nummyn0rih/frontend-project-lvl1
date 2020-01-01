@@ -3,9 +3,9 @@ import gameEngine from '..';
 import getRandom from '../get-random';
 
 const func = () => {
-  const step = getRandom(8, 1);
-  const firstValue = getRandom(25);
-  const secretValue = getRandom(9);
+  const step = getRandom(1, 8);
+  const firstValue = getRandom(0, 25);
+  const secretValue = getRandom(0, 9);
   const getNextValue = (num) => firstValue + step * num;
   const numbers = [...Array(10)].map((elem, index) => getNextValue(index));
   const result = numbers[secretValue];

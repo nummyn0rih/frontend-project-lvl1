@@ -16,7 +16,7 @@ const isPrime = (num) => {
 };
 
 const func = () => {
-  const number = getRandom(322, 1);
+  const number = getRandom(1, 322);
   return cons(number, isPrime(number));
 };
 

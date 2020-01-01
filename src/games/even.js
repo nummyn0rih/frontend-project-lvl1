@@ -5,7 +5,7 @@ import getRandom from '../get-random';
 const isEven = (num) => num % 2 === 0;
 
 const func = () => {
-  const question = getRandom(99);
+  const question = getRandom(0, 99);
   const correctAnswer = isEven(question) ? 'yes' : 'no';
   return cons(question, correctAnswer);
 };

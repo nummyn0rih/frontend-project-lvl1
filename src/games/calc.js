@@ -5,9 +5,9 @@ import getRandom from '../get-random';
 const func = () => {
   const signs = ['+', '-', '*'];
 
-  const sign = signs[getRandom(3)];
-  const num1 = getRandom(25);
-  const num2 = getRandom(25);
+  const sign = signs[getRandom(0, 3)];
+  const num1 = getRandom(0, 25);
+  const num2 = getRandom(0, 25);
 
   switch (sign) {
     case '+':
