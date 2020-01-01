@@ -1,14 +1,6 @@
 import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
 
-const greeting = (rules) => {
-  console.log('\nWelcome to the Brain Games!');
-  if (rules !== undefined) console.log(rules);
-  const name = readlineSync.question('\nMay I have your name?: ');
-  console.log(`Hello, ${name}!\n`);
-  return name;
-};
-
 const genQuestion = (func) => {
   const result = func();
   console.log(`Question: ${car(result)}`);
@@ -18,8 +10,10 @@ const genQuestion = (func) => {
 const requestPlayerAnswer = (text) => readlineSync.question(text);
 
 export default (rule, func) => {
-  const playerName = greeting(rule);
-  if (func === undefined) return;
+  console.log(`\nWelcome to the Brain Games!
+${rule}`);
+  const playerName = readlineSync.question('\nMay I have your name?: ');
+  console.log(`Hello, ${playerName}!\n`);
 
   let count = 0;
   while (count < 3) {
