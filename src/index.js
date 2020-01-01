@@ -7,8 +7,6 @@ const genQuestion = (func) => {
   return cdr(result);
 };
 
-const requestPlayerAnswer = (text) => readlineSync.question(text);
-
 export default (rule, func) => {
   console.log(`\nWelcome to the Brain Games!
 ${rule}`);
@@ -19,7 +17,7 @@ ${rule}`);
   while (count < 3) {
     const correctAnswer = genQuestion(func);
     const answerToStr = typeof correctAnswer === 'number' ? correctAnswer.toString() : correctAnswer;
-    const playerAnswer = requestPlayerAnswer('Your answer: ');
+    const playerAnswer = readlineSync.question('Your answer: ');
     if (answerToStr === playerAnswer) {
       console.log('Correct!');
       count += 1;
