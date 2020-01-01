@@ -13,19 +13,18 @@ ${rule}`);
   const playerName = readlineSync.question('\nMay I have your name?: ');
   console.log(`Hello, ${playerName}!\n`);
 
-  let count = 0;
-  while (count < 3) {
+  for (let count = 0; count < 3; count += 1) {
     const correctAnswer = genQuestion(func);
     const answerToStr = typeof correctAnswer === 'number' ? correctAnswer.toString() : correctAnswer;
     const playerAnswer = readlineSync.question('Your answer: ');
     if (answerToStr === playerAnswer) {
       console.log('Correct!');
-      count += 1;
     } else {
       console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.
 Let's try again, ${playerName}!\n`);
       return;
     }
   }
+
   console.log(`Congratulations, ${playerName}!\n`);
 };
