@@ -1,12 +1,6 @@
 import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
 
-const genQuestion = (func) => {
-  const result = func();
-  console.log(`Question: ${car(result)}`);
-  return cdr(result);
-};
-
 export default (rule, func) => {
   console.log(`\nWelcome to the Brain Games!
 ${rule}`);
@@ -14,9 +8,13 @@ ${rule}`);
   console.log(`Hello, ${playerName}!\n`);
 
   for (let count = 0; count < 3; count += 1) {
-    const correctAnswer = genQuestion(func);
+    const data = func();
+    console.log(`Question: ${car(data)}`);
+
+    const correctAnswer = cdr(data);
     const answerToStr = typeof correctAnswer === 'number' ? correctAnswer.toString() : correctAnswer;
     const playerAnswer = readlineSync.question('Your answer: ');
+
     if (answerToStr === playerAnswer) {
       console.log('Correct!');
     } else {
