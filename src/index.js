@@ -12,10 +12,9 @@ ${rule}`);
     console.log(`Question: ${car(data)}`);
 
     const correctAnswer = cdr(data);
-    const answerToStr = typeof correctAnswer === 'number' ? correctAnswer.toString() : correctAnswer;
     const playerAnswer = readlineSync.question('Your answer: ');
 
-    if (answerToStr === playerAnswer) {
+    if (correctAnswer === playerAnswer) {
       console.log('Correct!');
     } else {
       console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.

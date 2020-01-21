@@ -26,7 +26,7 @@ const createData = () => {
     num2: getRandom(0, 25),
   };
 
-  return cons(createQuestion(exerciseData), createAnswer(exerciseData));
+  return cons(createQuestion(exerciseData), createAnswer(exerciseData).toString());
 };
 
 const rule = 'What is the result of the expression?';

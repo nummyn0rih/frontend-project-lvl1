@@ -10,7 +10,7 @@ const createData = () => {
   const secretValuePosition = getRandom(0, progression.length - 1);
   const result = progression[secretValuePosition];
   progression[secretValuePosition] = '..';
-  return cons(progression.join(' '), result);
+  return cons(progression.join(' '), result.toString());
 };
 
 const rule = 'What number is missing in the progression?';
