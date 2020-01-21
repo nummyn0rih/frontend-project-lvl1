@@ -2,9 +2,9 @@ import { cons } from '@hexlet/pairs';
 import gameEngine from '..';
 import getRandom from '../get-random';
 
-const createData = () => {
-  const signs = ['+', '-', '*'];
+const signs = ['+', '-', '*'];
 
+const createData = () => {
   const sign = signs[getRandom(0, 3)];
   const num1 = getRandom(0, 25);
   const num2 = getRandom(0, 25);
