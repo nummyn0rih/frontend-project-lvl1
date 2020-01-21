@@ -7,10 +7,10 @@ const createData = () => {
   const firstValue = getRandom(0, 25);
   const secretValue = getRandom(0, 9);
   const getNextValue = (num) => firstValue + step * num;
-  const numbers = [...Array(10)].map((elem, index) => getNextValue(index));
-  const result = numbers[secretValue];
-  numbers[secretValue] = '..';
-  return cons(numbers.join(' '), result);
+  const progression = [...Array(10)].map((elem, index) => getNextValue(index));
+  const result = progression[secretValue];
+  progression[secretValue] = '..';
+  return cons(progression.join(' '), result);
 };
 
 const rule = 'What number is missing in the progression?';
