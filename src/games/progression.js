@@ -5,11 +5,11 @@ import getRandom from '../get-random';
 const createData = () => {
   const step = getRandom(1, 8);
   const firstValue = getRandom(0, 25);
-  const secretValue = getRandom(0, 9);
   const getNextValue = (num) => firstValue + step * num;
   const progression = [...Array(10)].map((elem, index) => getNextValue(index));
-  const result = progression[secretValue];
-  progression[secretValue] = '..';
+  const secretValuePosition = getRandom(0, progression.length - 1);
+  const result = progression[secretValuePosition];
+  progression[secretValuePosition] = '..';
   return cons(progression.join(' '), result);
 };
 
