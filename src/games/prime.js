@@ -15,11 +15,11 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-const func = () => {
+const createData = () => {
   const number = getRandom(1, 322);
   return cons(number, isPrime(number));
 };
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export default () => gameEngine(rule, func);
+export default () => gameEngine(rule, createData);

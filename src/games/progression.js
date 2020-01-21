@@ -2,7 +2,7 @@ import { cons } from '@hexlet/pairs';
 import gameEngine from '..';
 import getRandom from '../get-random';
 
-const func = () => {
+const createData = () => {
   const step = getRandom(1, 8);
   const firstValue = getRandom(0, 25);
   const secretValue = getRandom(0, 9);
@@ -15,4 +15,4 @@ const func = () => {
 
 const rule = 'What number is missing in the progression?';
 
-export default () => gameEngine(rule, func);
+export default () => gameEngine(rule, createData);

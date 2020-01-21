@@ -2,7 +2,7 @@ import { cons } from '@hexlet/pairs';
 import gameEngine from '..';
 import getRandom from '../get-random';
 
-const func = () => {
+const createData = () => {
   const signs = ['+', '-', '*'];
 
   const sign = signs[getRandom(0, 3)];
@@ -23,4 +23,4 @@ const func = () => {
 
 const rule = 'What is the result of the expression?';
 
-export default () => gameEngine(rule, func);
+export default () => gameEngine(rule, createData);
