@@ -5,7 +5,7 @@ import getRandom from '../get-random';
 const signs = ['+', '-', '*'];
 
 const createData = () => {
-  const sign = signs[getRandom(0, 3)];
+  const sign = signs[getRandom(0, signs.length)];
   const num1 = getRandom(0, 25);
   const num2 = getRandom(0, 25);
 
