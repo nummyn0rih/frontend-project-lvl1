@@ -7,7 +7,8 @@ export default (rule, func) => {
   const playerName = readlineSync.question('\nMay I have your name?: ');
   console.log(`Hello, ${playerName}!\n`);
 
-  for (let count = 0; count < 3; count += 1) {
+  const numberOfRounds = 3;
+  for (let count = 0; count < numberOfRounds; count += 1) {
     const data = func();
     console.log(`Question: ${car(data)}`);
 
