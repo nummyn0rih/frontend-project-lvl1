@@ -8,7 +8,7 @@ const isPrime = (num) => {
   if (num === 2) return true;
   if (num <= 1 || isEven(num)) return false;
   let divisor = 2;
-  while (divisor ** 2 <= num) {
+  while (divisor <= Math.sqrt(num)) {
     if (num % divisor === 0) return false;
     divisor += 1;
   }
