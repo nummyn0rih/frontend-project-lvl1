@@ -16,8 +16,8 @@ const isPrime = (num) => {
 };
 
 const createData = () => {
-  const number = getRandom(1, 322);
-  return cons(number, isPrime(number) ? 'yes' : 'no');
+  const question = getRandom(1, 322);
+  return cons(question, isPrime(question) ? 'yes' : 'no');
 };
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
