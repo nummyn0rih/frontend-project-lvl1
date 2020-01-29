@@ -21,7 +21,7 @@ const createAnswer = ({ sign, num1, num2 }) => {
 
 const createData = () => {
   const exerciseData = {
-    sign: signs[getRandom(0, signs.length)],
+    sign: signs[getRandom(0, signs.length - 1)],
     num1: getRandom(0, 25),
     num2: getRandom(0, 25),
   };

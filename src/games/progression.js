@@ -8,7 +8,7 @@ const createData = () => {
   const progressionLength = getRandom(8, 15);
   const getNextValue = (num) => firstValue + step * num;
   const progression = [...Array(progressionLength)].map((elem, index) => getNextValue(index));
-  const secretValuePosition = getRandom(0, progression.length - 1);
+  const secretValuePosition = getRandom(0, progressionLength - 1);
   const result = progression[secretValuePosition];
   progression[secretValuePosition] = '..';
   return cons(progression.join(' '), result.toString());
