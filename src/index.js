@@ -2,8 +2,8 @@ import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
 
 export default (rule, func) => {
-  console.log(`\nWelcome to the Brain Games!
-${rule}`);
+  console.log('\nWelcome to the Brain Games!');
+  console.log(rule);
   const playerName = readlineSync.question('\nMay I have your name?: ');
   console.log(`Hello, ${playerName}!\n`);
 
@@ -17,8 +17,8 @@ ${rule}`);
     if (correctAnswer === playerAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.
-Let's try again, ${playerName}!\n`);
+      console.log(`'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${playerName}!\n`);
       return;
     }
   }
