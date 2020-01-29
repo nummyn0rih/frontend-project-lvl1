@@ -5,8 +5,9 @@ import getRandom from '../get-random';
 const createData = () => {
   const step = getRandom(1, 8);
   const firstValue = getRandom(0, 25);
+  const progressionLength = getRandom(8, 15);
   const getNextValue = (num) => firstValue + step * num;
-  const progression = [...Array(10)].map((elem, index) => getNextValue(index));
+  const progression = [...Array(progressionLength)].map((elem, index) => getNextValue(index));
   const secretValuePosition = getRandom(0, progression.length - 1);
   const result = progression[secretValuePosition];
   progression[secretValuePosition] = '..';
